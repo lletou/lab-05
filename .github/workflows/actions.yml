@@ -30,7 +30,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "bubble_sort " -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/lab05/lab05/googletest*' -o lcov.info
+          lcov --remove lcov.info '/home/runner/work/lab-05/lab-05/googletest*' -o lcov.info
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
   CovTest:
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "bubble_sort" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/lab05/lab05/googletest/*' -o lcov.info ###
+          lcov --remove lcov.info '/home/runner/work/lab-05/lab-05/googletest/*' -o lcov.info ###
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
       - name: CovBeg
         uses: coverallsapp/github-action@master
